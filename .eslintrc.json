@@ -75,7 +75,7 @@
     ],
     "quotes": [1, "single", "avoid-escape"],
     "max-depth": [0, 4],
-    "max-len": [0, 80, 4],
+    "max-len": [2, 120, 4],
     "max-nested-callbacks": [0, 2],
     "max-params": [0, 3],
     "max-statements": [0, 10],
@@ -186,10 +186,7 @@
         "args": "after-used"
       }
     ],
-    "no-use-before-define": [
-      1,
-      { "functions": false, "classes": false, "variables": false }
-    ],
+    "no-use-before-define": [1, { "functions": false, "classes": false, "variables": false }],
     "no-var": [2],
     "no-void": [1],
     "no-warning-comments": [
@@ -202,11 +199,7 @@
     "no-with": [2],
     "one-var": [0],
     "operator-assignment": [0, "always"],
-    "operator-linebreak": [
-      1,
-      "after",
-      { "overrides": { "?": "ignore", ":": "ignore" } }
-    ],
+    "operator-linebreak": [1, "after", { "overrides": { "?": "ignore", ":": "ignore" } }],
     "padded-blocks": [0],
     "prefer-const": [1],
     "prefer-spread": [2],
@@ -215,10 +208,7 @@
     "semi": [2, "never"],
     "sort-vars": [0],
     "keyword-spacing": [2, { "after": true }],
-    "space-before-function-paren": [
-      0,
-      { "anonymous": "always", "named": "always" }
-    ],
+    "space-before-function-paren": [0, { "anonymous": "always", "named": "always" }],
     "space-before-blocks": [0, "always"],
     "object-curly-spacing": [2, "always"],
     "space-in-parens": [2, "never"],

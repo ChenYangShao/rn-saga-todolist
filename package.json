@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": false,
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.1",
