@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { View, Text, FlatList, StyleSheet } from 'react-native'
-// import { put } from 'redux-saga/effects'
+import { getState } from '../../utils'
 import Input from '../base/Input'
 
 function mapDispatchToProps(dispatch) {
@@ -10,7 +10,7 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-@connect(({ todo }) => ({ todo }), mapDispatchToProps)
+@connect(getState(['todo']), mapDispatchToProps)
 export default class TodoList extends React.Component {
   handleAddTask = (content, resetValue) => {
     this.props.addTodo(content)
@@ -24,6 +24,7 @@ export default class TodoList extends React.Component {
   _keyExtractor = task => {
     return task.id
   }
+
   render() {
     return (
       <View style={styles.container}>

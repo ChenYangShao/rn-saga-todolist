@@ -20,9 +20,6 @@ export default class Detail extends React.Component {
       id: props.navigation.state.params.id,
     }
   }
-  state = {
-    value: null,
-  }
 
   handleChange = value => {
     this.setState({ value })
@@ -30,12 +27,12 @@ export default class Detail extends React.Component {
 
   handleModify = () => {
     this.props.modify({ content: this.state.value, id: this.state.id })
-    this.props.navigation.navigate('List')
+    this.props.navigation.goBack()
   }
 
   handleRemove = () => {
     this.props.remove({ id: this.state.id })
-    this.props.navigation.navigate('List')
+    this.props.navigation.goBack()
   }
 
   render() {
